@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Torrents.sh</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="icon" href="assets/favicon.png"><script defer src="main.js"></script><link href="bundle.67b7a4e1007cedda63e9.min.css" rel="stylesheet"></head>
+    <body>
+        <header>
+        </header>
+        <!-- <div class="site-title">
+            <h1>
+            <a href="/">Torrents.sh<span class="cursor">█</span></a>
+            </h1>
+        </div> -->
+        <div id="title" class="container"></div>
+        <div id="links" class="container"></div>
+        <br>
+        <div id="ascii" class="container"></div>
+        <br>
+        <div id="info" class="container"></div>
+    </body>
+    <script>
+        if ("serviceWorker" in navigator) {
+            window.addEventListener("load", () => {
+                navigator.serviceWorker
+                    .register("service-worker.js")
+                    .then((registration) => {
+                        console.log("Service Worker registered: ", registration);
+                    })
+                    .catch((registrationError) => {
+                        console.error("Service Worker registration failed: ", registrationError);
+                    });
+            });
+        }
+    </script>
+</html>
